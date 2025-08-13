@@ -1,1 +1,10 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using EFCore01.Context;
+
+namespace EFCore01;
+internal class Program
+{
+    public static void Main()
+    {
+       
+    }
+}

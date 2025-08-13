@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EFCore01.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace EFCore01.Context
+namespace EFCore01.Context;
+
+internal class ITIDBContext : DbContext
 {
-    internal class CITIDBContext
+    //Student
+    public DbSet<Student> Students { get; set; };
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        optionsBuilder.UseSqlServer("server = .; database = ITI; Trusted_Connection = true; TrustServerCertificate = true");
     }
 }
