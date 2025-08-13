@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace EFCore01.Models
 {
-    [Keyless]
     [PrimaryKey(nameof(inst_ID), nameof(Course_ID))]
     internal class Course_Inst
     {
